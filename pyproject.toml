@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quantr"
+version = "0.5"
+authors = [
+  { name="Zsombor Papp", email="adorapapp@gmail.com" },
+]
+description = "A simple quantum computer simulator."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+	"Development Status :: 4 - Beta",
+	"Intended Audience :: Science/Research",
+	"Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ChloeForSure/quantr"
+"Bug Tracker" = "https://github.com/ChloeForSure/quantr/issues"
