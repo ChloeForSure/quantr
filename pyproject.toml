@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "quantr"
-version = "0.1"
+version = "0.1.1"
 authors = [
   { name="Chloe Papp", email="adorapapp@gmail.com" },
 ]

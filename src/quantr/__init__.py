@@ -118,13 +118,41 @@ class Statevector:
             return 1 
     
     #Measure all qubits on the computational basis
-    def measure_all(self):
+    def measureall(self):
         returnValue=">"
         for i in range(self.qubits):
             s=self.measure(i)
             returnValue=str(s)+returnValue
         returnValue="|"+returnValue
         return returnValue
+
+    #Bitflip error
+    def xerror(self,n,p):
+        if(np.random.rand()<p):
+            errop=I
+            if(n==0):
+                errop=X
+            for i in range(1,n):
+                errop*=I
+            if(n!=0):
+                errop*=X
+            for i in range(n+1,self.qubits):
+                errop*=I
+            self.vector=(self+errop).vector
+
+    #phaseflip error
+    def zerror(self,n,p):
+        if(np.random.rand()<p):
+            errop=I
+            if(n==0):
+                errop=X
+            for i in range(1,n):
+                errop*=I
+            if(n!=0):
+                errop*=X
+            for i in range(n+1,self.qubits):
+                errop*=I
+            self.vector=(self+errop).vector
 ###########Functions
 
 #Multi matrix kronecker product
